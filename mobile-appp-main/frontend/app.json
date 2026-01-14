@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "BigBoy",
+    "slug": "bigboy-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B35"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bigboy.mobile"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FF6B35"
+      },
+      "package": "com.bigboy.mobile",
+      "permissions": [
+        "CAMERA",
+        "LOCATION"
+      ]
+    },
+    "web": {},
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow BigBoy to access your camera to scan QR codes."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow BigBoy to access your location to show nearby restaurants."
+        }
+      ]
+    ]
+  }
+}
+
