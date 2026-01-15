@@ -1,4 +1,3 @@
-# src/api/routes/guest_routes.py
 
 from flask import Blueprint, request, jsonify, g
 from functools import wraps
@@ -226,3 +225,4 @@ def get_orders():
 
 
 __all__ = ["bp"]
+
