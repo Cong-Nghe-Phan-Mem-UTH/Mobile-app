@@ -7,9 +7,6 @@ bp = Blueprint("table", __name__)
 
 @bp.route("/tables/<int:table_id>", methods=["GET"])
 def get_table_by_id(table_id):
-    """
-    Lấy thông tin bàn theo ID
-    """
     session = get_session()
     try:
         table = session.query(TableModel).filter(
@@ -37,10 +34,6 @@ def get_table_by_id(table_id):
 
 @bp.route("/tables/token/<string:token>", methods=["GET"])
 def get_table_by_token(token):
-    """
-    Lấy thông tin bàn qua QR token
-    (dùng trước khi guest login)
-    """
     session = get_session()
     try:
         table = session.query(TableModel).filter(
@@ -64,3 +57,4 @@ def get_table_by_token(token):
         }), 200
     finally:
         session.close()
+
