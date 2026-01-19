@@ -1,5 +1,4 @@
 from flask import Blueprint, jsonify, g
-from app.api.decorators.guest_auth_required import guest_auth_required
 from app.models.order_model import OrderModel
 from app.models.dish_model import DishModel
 
@@ -36,3 +35,4 @@ def get_order_history():
         "success": True,
         "data": data
     }), 200
+
